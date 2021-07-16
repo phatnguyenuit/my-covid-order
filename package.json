@@ -1,0 +1,46 @@
+{
+  "name": "my-covid-order",
+  "version": "1.0.0",
+  "description": "My COVID order generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "covid",
+    "order",
+    "generator"
+  ],
+  "author": "PhatNguyen <phatnt.uit@gmail.com> (https://phatnguyenuit.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "dayjs": "^1.10.6",
+    "dotenv": "^10.0.0",
+    "fast-csv": "^4.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "husky": "4.2.5",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "yarn lint:fix"
+    ],
+    "{*.{json,md}}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
