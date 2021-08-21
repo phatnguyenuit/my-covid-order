@@ -11,6 +11,7 @@ const BLOCK_NO = process.env.BLOCK_NO;
 const APARTMENT_NO = process.env.APARTMENT_NO;
 const PHONE = process.env.PHONE;
 const USER_NAME = process.env.USER_NAME;
+const NOTE = process.env.NOTE;
 
 const today = dayjs();
 
@@ -29,6 +30,8 @@ const today = dayjs();
       console.log(`${index + 1}. ${name} - ${quantity}`);
     });
 
+    console.log('\n');
+    console.log(NOTE);
     console.log('\n');
   } catch (error) {
     console.error(`Error occurs`, error.message);
